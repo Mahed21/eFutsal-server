@@ -22,6 +22,7 @@ async function run() {
     const userCollection = database.collection("booking");
     const IndoorCollection = database.collection("indoor");
     const AdminCollection = database.collection("admin");
+    const TeamCollection = database.collection("team");
     console.log("connected");
 
     //get api
@@ -57,6 +58,18 @@ async function run() {
     //indoor get
     app.get("/indoor", async (req, res) => {
       const cursor = IndoorCollection.find({});
+      const users = await cursor.toArray();
+      res.send(users);
+    });
+
+    // team informatio
+    app.post("/team", async (req, res) => {
+      const newUser = req.body;
+      const result = await TeamCollection.insertOne(newUser);
+      res.send(result);
+    });
+    app.get("/team", async (req, res) => {
+      const cursor = TeamCollection.find({});
       const users = await cursor.toArray();
       res.send(users);
     });
