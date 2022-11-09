@@ -59,6 +59,11 @@ const teamSchema = mongoose.Schema(
       default: "pending",
       trim: true,
     },
+    isAdminApproved: {
+      type: String,
+      default: "pending",
+      trim: true,
+    },
   },
   { timestamps: true }
 );
