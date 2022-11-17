@@ -5,5 +5,7 @@ router
   .route("/")
   .get(indoorAdminController.getIndoorAdmin)
   .post(indoorAdminController.createIndoorAdmin);
+router.route("/:indoorName").delete(indoorAdminController.getDeleteIndoorAdmin);
+router.route("/:id").put(indoorAdminController.getIndoorAdminUpdateById);
 
 module.exports = router;
