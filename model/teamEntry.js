@@ -36,6 +36,42 @@ const teamEntrySchema = mongoose.Schema(
       required: true,
       trim: true,
     },
+    PlayerNameOne: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    PlayerNameTwo: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    PlayerNameThree: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    PlayerNameFour: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    PlayerNameFive: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    PlayerNameSix: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    PlayerNameSeven: {
+      type: String,
+      required: true,
+      trim: true,
+    },
   },
   { timestamps: true }
 );
