@@ -10,11 +10,13 @@ const adminRouter = require("./router/admin.router");
 const indoorRouter = require("./router/indoor.router");
 const TeamRouter = require("./router/team.router");
 const allIndoor = require("./router/allIndoorRouter");
+const Ranking = require("./router/ranking.router");
 
 app.use("/booking", bookingRouter);
 app.use("/admin", adminRouter);
 app.use("/indoor", indoorRouter);
 app.use("/team", TeamRouter);
 app.use("/allIndoor", allIndoor);
+app.use("/ranking", Ranking);
 
 module.exports = app;
