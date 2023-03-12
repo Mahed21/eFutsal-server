@@ -34,3 +34,23 @@ exports.createRanking = async (req, res, next) => {
     });
   }
 };
+
+exports.UpdateRankingById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    // console.log(id);
+
+    const result = await Ranking.updateOne({ _id: id }, { $set: req.body });
+    res.status(200).json({
+      status: "success",
+      message: "data updated Successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: "fail",
+      message: "data fail to update",
+      data: error.message,
+    });
+  }
+};

@@ -11,9 +11,14 @@ const RankingSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
+    totalMatch: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
 
     score: {
-      type: String,
+      type: Number,
       required: true,
       trim: true,
     },
